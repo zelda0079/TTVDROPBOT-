@@ -1,4 +1,4 @@
-# TTVDROPBOT-
+
 TTVDROPBOT自動重啟按鍵精靈腳本
 
 用於https://github.com/Zaarrg/TTVDropBot 2.0.0.4版
