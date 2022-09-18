@@ -1,0 +1,106 @@
+Dim times
+times = InputBox("輸入帳號數量") 
+
+Dim a
+Dim timeperiod
+a = InputBox("輸入多少分鍾刷新1次") 
+timeperiod=1000*60*a
+
+//times=86
+//timeperiod=1000*60*15
+
+For j =1 to 10000
+
+	For i = 1 To times
+	
+		KeyDown 18, 1 //複製窗口
+		Delay 20
+		KeyDown 16, 1
+		Delay 20
+		KeyPress 68, 1
+		Delay 20
+		KeyUp 16, 1
+		Delay 20
+		KeyUp 18, 1
+		Delay 20
+		KeyDown 17, 1 //下1頁
+		Delay 20
+		KeyPress 34, 1
+		Delay 20
+		KeyUp 17, 1
+		Delay 20
+		
+		Delay 500
+	Next
+	
+		
+	For i = 1 To times
+	
+		KeyDown 18, 1 //向左
+		Delay 20
+		KeyPress 37, 1
+		Delay 20
+		KeyUp 18, 1
+		Delay 20
+		
+		KeyDown 17, 1 //關閉舊窗口
+		Delay 20
+		KeyDown 16, 1
+		Delay 20
+		KeyPress 87, 1
+		Delay 20
+		KeyUp 16, 1
+		Delay 20
+		KeyUp 17, 1
+		Delay 20
+		
+		Delay 200
+		
+    	KeyPress "Down", 1 //新窗口按設定
+		Delay 200
+		KeyPress "Enter", 1
+		Delay 500
+		KeyPress "N", 1
+		Delay 200
+		KeyPress "Enter", 1
+		Delay 500
+		KeyPress "Enter", 1
+		Delay 200
+		
+		KeyDown 17, 1 //下1頁
+		Delay 20
+		KeyPress 34, 1
+		Delay 20
+		KeyUp 17, 1
+		Delay 300
+	Next
+	
+	For i = 1 To times //重做1次檢查
+	
+	
+    	KeyPress "Down", 1 //新窗口按設定
+		Delay 200
+		KeyPress "Enter", 1
+		Delay 500
+		KeyPress "N", 1
+		Delay 200
+		KeyPress "Enter", 1
+		Delay 500
+		KeyPress "Enter", 1
+		Delay 200
+		
+		KeyDown 17, 1 //下1頁
+		Delay 20
+		KeyPress 34, 1
+		Delay 20
+		KeyUp 17, 1
+		Delay 300
+	Next
+	
+	
+	Delay timeperiod
+
+Next
+
+
+
