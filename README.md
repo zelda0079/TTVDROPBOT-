@@ -7,6 +7,7 @@ TTVDROPBOT自動重啟按鍵精靈腳本<br>
 <br>
 配合WINDOWS TERMINAL<br>
 先做一個TTVDROPBOT的設定檔，並在設定->啟動->預設設定檔選擇這個TTVDROPBOT的設定檔<br>
+https://i.imgur.com/fLct2H3.png<br>
 到各個裝了的CONFIG的目錄右鍵->啟動終端機<br>
 <br>
 之於製作這些CONFIG則是你事先在TTVDROPBOT了登入1次帳號<br>
