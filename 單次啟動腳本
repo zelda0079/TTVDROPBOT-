@@ -1,0 +1,22 @@
+times=86  //輸入你的帳號數量
+
+For i = 1 To 86
+	Delay 200
+    KeyPress "Down", 1
+	Delay 200
+	KeyPress "Enter", 1
+	Delay 500
+	KeyPress "N", 1
+	Delay 200
+	KeyPress "Enter", 1
+	Delay 500
+	KeyPress "Enter", 1
+	Delay 200
+	KeyDown 17, 1
+	Delay 20
+	KeyPress 34, 1
+	Delay 20
+	KeyUp 17, 1
+	Delay 300
+Next
+
