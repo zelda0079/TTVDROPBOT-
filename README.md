@@ -1,8 +1,10 @@
 
 TTVDROPBOT自動重啟按鍵精靈腳本<br>
-<br><br>
+<br>
 用於https://github.com/Zaarrg/TTVDropBot 2.0.0.4版<br>
-2.0.0.4版會出ERROR<br><br>
+2.0.0.4版會出ERROR<br>
+因此會TTVDropBot會停掉<br>
+<br>
 因此需要自動重啟腳本來定時自動重啟TTVDROPBOT<br>
 <br>
 配合WINDOWS TERMINAL<br>
