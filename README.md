@@ -1,0 +1,2 @@
+# TTVDROPBOT-
+TTVDROPBOT自動重啟按鍵精靈腳本
