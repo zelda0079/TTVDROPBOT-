@@ -75,29 +75,6 @@ For j =1 to 10000
 		Delay 300
 	Next
 	
-	For i = 1 To times //重做1次檢查
-	
-	
-    	KeyPress "Down", 1 //新窗口按設定
-		Delay 200
-		KeyPress "Enter", 1
-		Delay 500
-		KeyPress "N", 1
-		Delay 200
-		KeyPress "Enter", 1
-		Delay 500
-		KeyPress "Enter", 1
-		Delay 200
-		
-		KeyDown 17, 1 //下1頁
-		Delay 20
-		KeyPress 34, 1
-		Delay 20
-		KeyUp 17, 1
-		Delay 300
-	Next
-	
-	
 	Delay timeperiod
 
 Next
