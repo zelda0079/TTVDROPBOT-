@@ -22,3 +22,12 @@ https://i.imgur.com/fLct2H3.png<br>
 用人手啟動太慢太笨了<br>
 如果人離開又打算掛機，則使用自動重啟腳本對應2.0.0.4的ERROR BUG<br>
 需要使用電腦時則使用單次啟動腳本就好<br>
+<br><br><br>
+===========================================================================
+2022/10/18更新<br>
+加入FIREFOX腳本<br>
+FIREFOX安裝兩個插件<br>
+https://addons.mozilla.org/zh-TW/firefox/addon/twitchautoclicker/ <br>
+https://addons.mozilla.org/zh-TW/firefox/addon/multi-account-containers/ <br>
+預先新增容器及登入TWITCH帳號<br>
+就可以使用
