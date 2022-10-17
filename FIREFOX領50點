@@ -1,0 +1,65 @@
+
+Delay 500
+Dim a
+Dim start
+Dim acc_num
+
+
+acc_num = InputBox("輸入帳號數量") 
+Delay 500
+start = InputBox("輸入起始位置") 
+Delay 500
+
+
+For i = 1 To 100000
+
+	T1 = Plugin.Sys.GetTime
+	TracePrint T1
+	KeyPress "Tab", 1
+	
+    For j = start To acc_num
+		KeyDown 17, 1  '叫出容器清單
+		Delay 20
+		KeyPress 190, 1
+		Delay 20
+		KeyUp 17, 1
+		Delay 1200
+		KeyPress 9, 2
+		
+		Delay 500
+		KeyPress "Right", 1  '進入所選容器
+		Delay 100
+		KeyPress "Tab", 2
+		KeyPress "Tab", j
+		'For k = 1 To j
+		'	KeyPress "Tab", 1
+		'Next
+		KeyPress "Enter", 1
+
+		Delay 500
+		SayString "https://www.twitch.tv/popout/hitsquadgodfather/chat"
+		Delay 100
+		KeyPress "Enter", 1
+		
+		Delay 200
+		KeyDown 17, 1
+		KeyPress 33, 1
+		Delay 50
+		KeyPress "W", 1
+		KeyUp 17, 1
+
+		If 4000 - j *  70 > 1000 Then 
+			Delay 4000 - j *  70
+		Else 
+			Delay 1000
+		End If
+
+	Next
+	start = 1
+	T2 = Plugin.Sys.GetTime
+	TracePrint T2
+	TracePrint (T2-T1)/1000 &"秒" & (T2-T1)/1000/60 &"分" 
+	'Delay 4000
+	Delay 1000*220   '我掛86個帳號剩下210秒才夠15分鍾, 我安全起見設定調了等220秒, 實際你要多少秒要做一次調試運行一次才知道
+
+Next
