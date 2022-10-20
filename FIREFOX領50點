@@ -53,12 +53,15 @@ For i = 1 To 100000
 		Else 
 			Delay 1000
 		End If
-
+		If j = 68 Then    '第68個帳號時所用的時間, 可自行修改數字
+			T3 = Plugin.Sys.GetTime
+		end if
 	Next
 	start = 1
 	T2 = Plugin.Sys.GetTime
 	TracePrint T2
-	TracePrint (T2-T1)/1000 &"秒" & (T2-T1)/1000/60 &"分" 
+	TracePrint (T2 - T1) / 1000 & "秒" & (T2 - T1) / 1000 / 60 & "分"
+	TracePrint (T3 - T1) / 1000 & "秒" & (T2 - T1) / 1000 / 60 & "分    'T3-T1是用來測定第N個帳號是所使用的時間
 	'Delay 4000
 	Delay 1000*220   '我掛86個帳號剩下210秒才夠15分鍾, 我安全起見設定調了等220秒, 實際你要多少秒要做一次調試運行一次才知道
 
