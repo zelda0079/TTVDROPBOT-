@@ -1,4 +1,15 @@
-
+2022/10/22更新<br>
+優化腳本最後的計時<br>
+應該不用自己算時間<br>
+===========================================================================
+2022/10/18更新<br>
+加入FIREFOX腳本<br>
+FIREFOX安裝兩個插件<br>
+https://addons.mozilla.org/zh-TW/firefox/addon/twitchautoclicker/ <br>
+https://addons.mozilla.org/zh-TW/firefox/addon/multi-account-containers/ <br>
+預先新增容器及登入TWITCH帳號<br>
+就可以使用
+===========================================================================
 TTVDROPBOT自動重啟按鍵精靈腳本<br>
 <br>
 用於https://github.com/Zaarrg/TTVDropBot 2.0.0.4版<br>
@@ -24,14 +35,5 @@ https://i.imgur.com/fLct2H3.png<br>
 需要使用電腦時則使用單次啟動腳本就好<br>
 <br><br><br>
 ===========================================================================
-2022/10/18更新<br>
-加入FIREFOX腳本<br>
-FIREFOX安裝兩個插件<br>
-https://addons.mozilla.org/zh-TW/firefox/addon/twitchautoclicker/ <br>
-https://addons.mozilla.org/zh-TW/firefox/addon/multi-account-containers/ <br>
-預先新增容器及登入TWITCH帳號<br>
-就可以使用
-===========================================================================
-2022/10/22更新<br>
-優化腳本最後的計時<br>
-應該不用自己算時間<br>
+
+
