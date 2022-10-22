@@ -31,3 +31,7 @@ https://addons.mozilla.org/zh-TW/firefox/addon/twitchautoclicker/ <br>
 https://addons.mozilla.org/zh-TW/firefox/addon/multi-account-containers/ <br>
 預先新增容器及登入TWITCH帳號<br>
 就可以使用
+===========================================================================
+2022/10/22更新<br>
+優化腳本最後的計時<br>
+應該不用自己算時間<br>
