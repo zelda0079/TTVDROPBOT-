@@ -2,7 +2,11 @@
 Delay 500
 Dim a
 Dim start
-Dim acc_num
+Dim acc_num 
+Dim T1
+Dim T2
+Dim T3
+Dim T3j
 
 
 acc_num = InputBox("輸入帳號數量") 
@@ -10,13 +14,14 @@ Delay 500
 start = InputBox("輸入起始位置") 
 Delay 500
 
+Dim time_storage()
+
+redim time_storage (acc_num)
 
 For i = 1 To 100000
 
-	T1 = Plugin.Sys.GetTime
-	TracePrint T1
 	KeyPress "Tab", 1
-	
+	time_storage(0) = Plugin.Sys.GetTime
     For j = start To acc_num
 		KeyDown 17, 1  '叫出容器清單
 		Delay 20
@@ -47,22 +52,33 @@ For i = 1 To 100000
 		Delay 50
 		KeyPress "W", 1
 		KeyUp 17, 1
-
-		If 4000 - j *  70 > 1000 Then 
-			Delay 4000 - j *  70
+		
+		
+		'TracePrint Plugin.Sys.GetTime-time_storage(j-1)
+		If 4000 - j *  65 > 1000 Then 
+			Delay 4000 - j *  65
 		Else 
 			Delay 1000
 		End If
-		If j = 68 Then    '第68個帳號時所用的時間, 可自行修改數字
-			T3 = Plugin.Sys.GetTime
-		end if
+		'TracePrint Plugin.Sys.GetTime-time_storage(j-1)
+		time_storage(j) = Plugin.Sys.GetTime
+		'TracePrint "第" & j & "個與第 "& (j-1) & "個之間差" & (time_storage(j) - time_storage(j-1)) / 1000 & "秒" 
+		
+		
 	Next
-	start = 1
-	T2 = Plugin.Sys.GetTime
-	TracePrint T2
-	TracePrint (T2 - T1) / 1000 & "秒" & (T2 - T1) / 1000 / 60 & "分"
-	TracePrint (T3 - T1) / 1000 & "秒" & (T2 - T1) / 1000 / 60 & "分    'T3-T1是用來測定第N個帳號是所使用的時間
-	'Delay 4000
-	Delay 1000*220   '我掛86個帳號剩下210秒才夠15分鍾, 我安全起見設定調了等220秒, 實際你要多少秒要做一次調試運行一次才知道
 
+	'TracePrint "全程運行" & (time_storage(acc_num) - time_storage(0)) / 1000 & "秒" & (T2 - T1) / 1000 / 60 & "分"
+	'TracePrint "第" & "23" & "個帳號運行" & (time_storage(23) - time_storage(0)) / 1000 & "秒" & (T3 - T1) / 1000 / 60 & "分"
+
+ 
+	If (time_storage(acc_num) - time_storage(1))/1000 <900 then
+		If start <47 then
+			Delay 1000 * ((900 - (time_storage(acc_num) - time_storage(1)) / 1000)-7.55*(start-1))+1000  '段半時是起始不是1時的時間調整
+		else	
+			Delay 1000 * ((900 - (time_storage(acc_num) - time_storage(1)) / 1000)-7.55*(start-1)-0.026*(start-1-46)*(start-46)/2)+1000  '段半時是起始不是1時的時間調整
+		End If
+	Else
+		Delay 4000
+	End If	
+start = 1
 Next
