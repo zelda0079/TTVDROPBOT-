@@ -71,11 +71,11 @@ For i = 1 To 100000
 	'TracePrint "第" & "23" & "個帳號運行" & (time_storage(23) - time_storage(0)) / 1000 & "秒" & (T3 - T1) / 1000 / 60 & "分"
 
  
-	If (time_storage(acc_num) - time_storage(1))/1000 <900 then
+	If (time_storage(acc_num) - time_storage(0))/1000 <900 then
 		If start <47 then
-			Delay 1000 * ((900 - (time_storage(acc_num) - time_storage(1)) / 1000)-7.55*(start-1))+1000  '段半時是起始不是1時的時間調整
+			Delay 1000 * ((900 - (time_storage(acc_num) - time_storage(0)) / 1000)-7.55*(start-1))+1000  '段半時是起始不是1時的時間調整
 		else	
-			Delay 1000 * ((900 - (time_storage(acc_num) - time_storage(1)) / 1000)-7.55*(start-1)-0.026*(start-1-46)*(start-46)/2)+1000  '段半時是起始不是1時的時間調整
+			Delay 1000 * ((900 - (time_storage(acc_num) - time_storage(0)) / 1000)-7.55*(start-1)-0.026*(start-1-46)*(start-46)/2)+1000  '段半時是起始不是1時的時間調整
 		End If
 	Else
 		Delay 4000
